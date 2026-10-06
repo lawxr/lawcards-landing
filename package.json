@@ -1,0 +1,21 @@
+{
+  "name": "lawcards-landing",
+  "version": "1.0.0",
+  "description": "LawCards — TCG Collector Vault & Pre-Launch Storefront",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  },
+  "keywords": [
+    "tcg",
+    "pokemon",
+    "lawcards",
+    "cloudflare-worker"
+  ],
+  "author": "LawCards",
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "^3.114.0"
+  }
+}

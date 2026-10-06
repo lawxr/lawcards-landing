@@ -1,0 +1,18 @@
+# Cloudflare Static Assets & Security Headers
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/logo.svg
+  Content-Type: image/svg+xml
+  Cache-Control: public, max-age=604800
+
+/letras.svg
+  Content-Type: image/svg+xml
+  Cache-Control: public, max-age=604800
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
