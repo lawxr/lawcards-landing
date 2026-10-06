@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>LawCards — Tienda Oficial TCG Medellín (Próximamente)</title>
+  <title>LawCards — Tienda Oficial TCG Medellín</title>
   
-  <meta name="description" content="Próximamente tienda oficial de TCG: Pokémon TCG, Slabs certificados PSA/BGS y producto sellado de colección. Envíos asegurados desde Medellín a todo el mundo." />
-  <meta name="keywords" content="LawCards, TCG, Pokémon TCG, PSA 10, Charizard, Slabs, Medellín, Colombia, Coleccionables, Cartas coleccionables" />
+  <meta name="description" content="Próximamente tienda oficial de TCG: Pokémon TCG, Slabs certificados PSA/BGS y producto sellado de colección. Envíos desde Medellín para todo el mundo." />
+  <meta name="keywords" content="LawCards, TCG, Pokémon TCG, PSA 10, Charizard, Slabs, Medellín, Colombia, Coleccionables" />
 
   <!-- Security Headers & Content Security Policy -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -30,13 +30,13 @@
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <link rel="apple-touch-icon" href="logo.svg" />
 
-  <!-- Preload Bundled Fonts (From lawx) -->
+  <!-- Preload Bundled Fonts -->
   <link rel="preload" href="assets/fonts/VCR.woff" as="font" type="font/woff" crossorigin />
   <link rel="preload" href="assets/fonts/Helvetica.woff" as="font" type="font/woff" crossorigin />
   <link rel="preload" href="assets/fonts/Helvetica-Bold.woff" as="font" type="font/woff" crossorigin />
 
   <!-- Master Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 
   <!-- Schema.org Rich Snippet -->
   <script type="application/ld+json">
@@ -44,7 +44,7 @@
     "@context": "https://schema.org",
     "@type": "Store",
     "name": "LawCards",
-    "description": "Authentic Trading Card Game gallery and upcoming storefront in Medellín, Colombia.",
+    "description": "Tienda de cartas coleccionables TCG en Medellín, Colombia.",
     "url": "https://lawcards.co",
     "logo": "https://lawcards.co/logo.svg",
     "address": {
@@ -61,207 +61,93 @@
 </head>
 <body>
 
-  <!-- Ambient Interactive Canvas (Grid & Stardust) -->
+  <!-- Ambient Interactive Canvas -->
   <canvas id="ambientCanvas" aria-hidden="true"></canvas>
 
-  <!-- Ambient Floating Graphic Elements (From lawx) -->
+  <!-- Ambient Floating Graphic Elements -->
   <img src="assets/img/star-a.svg" alt="" class="bg-decor bg-decor--star-a" aria-hidden="true" draggable="false" />
   <img src="assets/img/star-b.svg" alt="" class="bg-decor bg-decor--star-b" aria-hidden="true" draggable="false" />
   <img src="assets/img/flower.svg" alt="" class="bg-decor bg-decor--flower" aria-hidden="true" draggable="false" />
   <img src="assets/img/carta1-removebg-preview.png" alt="" class="bg-decor bg-decor--card1" aria-hidden="true" draggable="false" />
   <img src="assets/img/carta2-removebg-preview.png" alt="" class="bg-decor bg-decor--card2" aria-hidden="true" draggable="false" />
 
-  <!-- Top Marquee Ticker -->
-  <div class="ticker-wrap" aria-hidden="true">
-    <div class="ticker-track">
-      <span class="ticker-item">✦ <b>LAWCARDS TCG</b> ✦ PRÓXIMAMENTE TIENDA OFICIAL ✦</span>
-      <span class="ticker-item">ENCAPSULATED AUTHENTICITY · PSA 10 SLABS · FACTORY SEALED BOXES</span>
-      <span class="ticker-item">POKÉMON TCG · RETRO GBA &amp; SINGLES DE COLECCIÓN</span>
-      <span class="ticker-item">✦ DESDE MEDELLÍN PARA TODO EL MUNDO ✦ PREVENTAS &amp; DROPS EXCLUSIVOS ✦</span>
-      <!-- Marquee loop clone -->
-      <span class="ticker-item">✦ <b>LAWCARDS TCG</b> ✦ PRÓXIMAMENTE TIENDA OFICIAL ✦</span>
-      <span class="ticker-item">ENCAPSULATED AUTHENTICITY · PSA 10 SLABS · FACTORY SEALED BOXES</span>
-      <span class="ticker-item">POKÉMON TCG · RETRO GBA &amp; SINGLES DE COLECCIÓN</span>
-      <span class="ticker-item">✦ DESDE MEDELLÍN PARA TODO EL MUNDO ✦ PREVENTAS &amp; DROPS EXCLUSIVOS ✦</span>
-    </div>
-  </div>
-
-  <!-- FIXED HUD CONTROLS (DIRECT HOMAGE TO LAWX) -->
-  <aside class="hud-controls" aria-label="Controles del sistema">
-    <button class="hud-btn is-active" id="btnSnd" title="Sonido sintetizador UI" aria-label="Alternar sonido">
-      <span class="hud-btn__bars" aria-hidden="true">
-        <i></i><i></i><i></i>
-      </span>
-      <span class="hud-btn__label">SND</span>
-    </button>
-    <button class="hud-btn" id="btnShare" title="Compartir enlace" aria-label="Compartir">
-      <span class="hud-btn__glyph">↗</span>
-      <span class="hud-btn__label">SHARE</span>
-    </button>
-  </aside>
-
   <!-- MAIN PAGE LAYOUT -->
   <main class="main-layout" id="top">
     
-    <!-- TOP HEADER STATUS BAR -->
+    <!-- TOP HEADER -->
     <header class="site-header">
       <div class="header-brand">
         <img src="logo.svg" alt="LawCards Dragon" class="header-dragon-icon" draggable="false" />
-        <span><b>LawCards</b> // 2026</span>
+        <span class="header-brand__name">LawCards</span>
       </div>
-      <div class="header-status-badge">
+      <div class="header-status">
         <span class="pulse-dot"></span>
-        <span>SYS: EN PREPARACIÓN // MEDELLÍN</span>
+        <span>Próximamente // Medellín</span>
       </div>
     </header>
 
-    <!-- 3D HOLOGRAPHIC SLAB HERO (THE CENTERPIECE) -->
-    <section class="slab-stage" aria-label="Slab holográfico 3D LawCards">
-      <div class="slab-container" id="slabContainer" title="Haz clic para girar e inspeccionar el certificado">
-        <div class="slab-inner">
-          
-          <!-- FRONT FACE (PSA STYLE GRADED SLAB) -->
-          <div class="slab-face slab-face--front">
-            <!-- Holographic Foil Glare Overlay -->
-            <div class="slab-holo-foil" aria-hidden="true"></div>
-
-            <!-- Archival PSA-Grade Header -->
-            <div class="slab-grade-label">
-              <div class="slab-grade-info">
-                <span class="slab-grade-tag">LAWCARDS ARCHIVAL VAULT</span>
-                <span class="slab-grade-title">FOUNDER</span>
-                <span class="slab-grade-cert">#000001 · 1ST EDITION · TCG</span>
-              </div>
-              <div class="slab-grade-score">
-                <div class="slab-grade-num">10</div>
-                <div class="slab-grade-sub">GEM MT</div>
-              </div>
-            </div>
-
-            <!-- Artwork Display Window -->
-            <div class="slab-art-window">
-              <!-- Orbital celestial rings -->
-              <div class="slab-orbital-ring" aria-hidden="true"></div>
-              <div class="slab-orbital-ring slab-orbital-ring--inner" aria-hidden="true"></div>
-
-              <!-- Animated Dragon Emblem (logo.svg) -->
-              <div class="slab-dragon-wrap">
-                <img src="logo.svg" alt="Emblema Dragón LawCards" class="slab-dragon-svg" draggable="false" />
-              </div>
-
-              <!-- Typography Wordmark (letras.svg) -->
-              <div class="slab-letras-wrap">
-                <img src="letras.svg" alt="LawCards Typography" class="slab-letras-svg" draggable="false" />
-              </div>
-            </div>
-
-            <!-- Bottom Slab Footnote -->
-            <div class="slab-footer-info">
-              <span>SECURITY SEAL // AUTHENTIC</span>
-              <span>MEDELLÍN · CO</span>
-            </div>
-          </div>
-
-          <!-- BACK FACE (CERTIFICATE OF AUTHENTICITY WITH REAL SCANNABLE QR) -->
-          <div class="slab-face slab-face--back">
-            <div class="slab-back-header">
-              <span>CERTIFICATE OF AUTHENTICITY</span>
-              <span>PSA-EQUIV // GEM 10</span>
-            </div>
-
-            <div class="slab-back-body">
-              <div class="slab-back-qr" title="Escanear Instagram @lawcardss">
-                <img src="assets/img/qr.svg" alt="Código QR @lawcardss" class="slab-qr-img" draggable="false" />
-              </div>
-
-              <table class="slab-spec-table">
-                <tr><td>ID DE CERTIFICACIÓN</td><td>#LC-2026-0001</td></tr>
-                <tr><td>CATEGORÍA</td><td>LAWCARDS VAULT</td></tr>
-                <tr><td>ESTADO DE TIENDA</td><td>PRÓXIMAMENTE // ONLINE</td></tr>
-                <tr><td>CENTRO LOGÍSTICO</td><td>MEDELLÍN, COLOMBIA</td></tr>
-                <tr><td>CALIDAD DE SELLADO</td><td>HERMÉTICO UV BLOCKED</td></tr>
-              </table>
-            </div>
-
-            <div class="slab-footer-info">
-              <span>VERIFICADO POR LAWCARDS LAB</span>
-              <span>100% AUTÉNTICO</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Quick Flip Affordance Button -->
-      <button class="slab-flip-hint" id="slabFlipTrigger" type="button">
-        <span id="slabFlipText">[► GIRAR: VER CERTIFICADO &amp; AUTENTICIDAD]</span>
-      </button>
-    </section>
-
-    <!-- HERO ANNOUNCEMENT (PRÓXIMAMENTE TIENDA DE TCG) -->
+    <!-- HERO TITLE (ABOVE THE CARD) -->
     <section class="hero-content">
-      <div class="hero-eyebrow">
-        <span>[SYS // PRE-LAUNCH 2026]</span>
-        <span>·</span>
-        <b>TIENDA TCG EN CONSTRUCCIÓN</b>
-      </div>
-      
       <h1 class="hero-title">
-        Próximamente nuestra<br class="hero-br">tienda de TCG.
+        Próximamente nuestra<br>tienda de TCG
       </h1>
-
       <p class="hero-sub">
-        Estamos preparando la galería definitiva para coleccionistas. Pokémon TCG, Slabs certificados PSA/BGS, Booster Boxes selladas y singles de alta gama directos desde Medellín para todo el mundo.
+        Pokémon TCG, slabs certificados PSA/BGS y producto sellado de colección. Envíos asegurados desde Medellín a todo el mundo.
       </p>
-
-      <div class="hero-tags">
-        <span class="hero-tag">● POKÉMON TCG</span>
-        <span class="hero-tag">● SLABS PSA 10 / BGS</span>
-        <span class="hero-tag">● FACTORY SEALED</span>
-        <span class="hero-tag">● SINGLES DE COLECCIÓN</span>
-        <span class="hero-tag">● ENVÍOS ASEGURADOS</span>
-      </div>
-
-      <!-- VIP DROP ALERT / EARLY ACCESS SIGNUP (COMENTADO TEMPORALMENTE)
-      <div class="drop-alert-box">
-        <div class="drop-alert-title">
-          <span>ACCESO VIP AL DROP // 24H ANTES</span>
-          <span>[PRIORIDAD]</span>
-        </div>
-        <p class="drop-alert-desc">
-          Ingresa tu correo o WhatsApp para recibir invitación preferencial y acceso privado al primer lote de stock antes de la apertura oficial:
-        </p>
-        <form class="drop-alert-form" id="dropAlertForm">
-          <input 
-            type="text" 
-            id="dropAlertInput" 
-            class="drop-alert-input" 
-            placeholder="ej. coleccionista@correo.com o +57 300..." 
-            required 
-            aria-label="Correo o WhatsApp para acceso prioritario"
-          />
-          <button type="submit" id="dropAlertBtn" class="drop-alert-btn">
-            AVÍSAME DEL DROP ↗
-          </button>
-        </form>
-      </div>
-      -->
     </section>
 
-    <!-- LINKTREE HUB: REDES SOCIALES OFICIALES -->
-    <section class="linktree-section" aria-label="Redes sociales y canales oficiales">
-      
-      <div class="section-head">
-        <h2 class="section-head__title">02 // CANALES &amp; REDES SOCIALES</h2>
-        <span class="section-head__sub">[OFICIALES]</span>
-      </div>
+    <!-- 3D HOLOGRAPHIC SLAB HERO (CENTERPIECE - NO FLIP) -->
+    <section class="slab-stage" aria-label="Slab holográfico LawCards">
+      <div class="slab-container" id="slabContainer">
+        <div class="slab-face">
+          <!-- Prismatic Foil Glare Overlay -->
+          <div class="slab-holo-foil" aria-hidden="true"></div>
 
+          <!-- Archival PSA-Grade Header -->
+          <div class="slab-grade-label">
+            <div class="slab-grade-info">
+              <span class="slab-grade-tag">LAWCARDS ARCHIVAL VAULT</span>
+              <span class="slab-grade-title">FOUNDER</span>
+              <span class="slab-grade-cert">#000001 · 1ST EDITION · TCG</span>
+            </div>
+            <div class="slab-grade-score">
+              <div class="slab-grade-num">10</div>
+              <div class="slab-grade-sub">GEM MT</div>
+            </div>
+          </div>
+
+          <!-- Artwork Display Window -->
+          <div class="slab-art-window">
+            <div class="slab-orbital-ring" aria-hidden="true"></div>
+            <div class="slab-orbital-ring slab-orbital-ring--inner" aria-hidden="true"></div>
+
+            <!-- Animated Dragon Emblem -->
+            <div class="slab-dragon-wrap">
+              <img src="logo.svg" alt="Emblema Dragón LawCards" class="slab-dragon-svg" draggable="false" />
+            </div>
+
+            <!-- Typography Wordmark -->
+            <div class="slab-letras-wrap">
+              <img src="letras.svg" alt="LawCards Typography" class="slab-letras-svg" draggable="false" />
+            </div>
+          </div>
+
+          <!-- Bottom Slab Footnote -->
+          <div class="slab-footer-info">
+            <span>ENCAPSULATED AUTHENTICITY</span>
+            <span>MEDELLÍN · CO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECT OFFICIAL CHANNELS -->
+    <section class="links-section" aria-label="Canales oficiales">
       <div class="links-grid">
 
-        <!-- 01 // INSTAGRAM -->
+        <!-- INSTAGRAM -->
         <a href="https://www.instagram.com/lawcardss/" target="_blank" rel="noopener noreferrer" class="link-card">
           <div class="link-card__left">
-            <span class="link-card__idx">01</span>
             <div class="link-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -270,91 +156,34 @@
               </svg>
             </div>
             <div class="link-card__info">
-              <h3 class="link-card__title">
-                Instagram Oficial
-                <span class="link-card__badge">@lawcardss</span>
-              </h3>
-              <p class="link-card__desc">Drops semanales, reveals de cartas, subastas en historias y stock en vivo.</p>
+              <h2 class="link-card__title">
+                Instagram
+                <span class="link-card__handle">@lawcardss</span>
+              </h2>
+              <p class="link-card__desc">Drops semanales, reveals de cartas y stock en vivo.</p>
             </div>
           </div>
-          <div class="link-card__right">
-            <button class="link-card__copy" data-copy="@lawcardss" title="Copiar handle de Instagram" aria-label="Copiar usuario">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            </button>
-            <span class="link-card__action">SEGUIR ↗</span>
-          </div>
+          <span class="link-card__arrow" aria-hidden="true">↗</span>
         </a>
 
-        <!-- 02 // TIKTOK -->
+        <!-- TIKTOK -->
         <a href="https://www.tiktok.com/@lawcards" target="_blank" rel="noopener noreferrer" class="link-card">
           <div class="link-card__left">
-            <span class="link-card__idx">02</span>
             <div class="link-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
               </svg>
             </div>
             <div class="link-card__info">
-              <h3 class="link-card__title">
-                TikTok Oficial
-                <span class="link-card__badge">@lawcards</span>
-              </h3>
-              <p class="link-card__desc">Box breaks en directo, openings de sobres y videos de colección en streaming.</p>
+              <h2 class="link-card__title">
+                TikTok
+                <span class="link-card__handle">@lawcards</span>
+              </h2>
+              <p class="link-card__desc">Box breaks en directo, openings de sobres y novedades.</p>
             </div>
           </div>
-          <div class="link-card__right">
-            <button class="link-card__copy" data-copy="@lawcards" title="Copiar usuario TikTok" aria-label="Copiar usuario">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            </button>
-            <span class="link-card__action">VER EN VIVO ↗</span>
-          </div>
+          <span class="link-card__arrow" aria-hidden="true">↗</span>
         </a>
-
-        <!-- 03 // WHATSAPP CONCIERGE (PRÓXIMAMENTE) -->
-        <div class="link-card is-soon" title="Canal oficial próximamente disponible">
-          <div class="link-card__left">
-            <span class="link-card__idx">03</span>
-            <div class="link-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
-            </div>
-            <div class="link-card__info">
-              <h3 class="link-card__title">
-                WhatsApp Concierge
-                <span class="link-card__badge">PRÓXIMAMENTE</span>
-              </h3>
-              <p class="link-card__desc">Atención directa, preventas exclusivas y asesoría personalizada en cartas.</p>
-            </div>
-          </div>
-          <div class="link-card__right">
-            <span class="link-card__action">[PRÓXIMAMENTE]</span>
-          </div>
-        </div>
-
-        <!-- 04 // TIENDA EN LÍNEA (PRÓXIMAMENTE) -->
-        <div class="link-card is-soon" title="Tienda oficial de TCG en preparación">
-          <div class="link-card__left">
-            <span class="link-card__idx">04</span>
-            <div class="link-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <path d="M16 10a4 4 0 0 1-8 0"></path>
-              </svg>
-            </div>
-            <div class="link-card__info">
-              <h3 class="link-card__title">
-                Tienda en Línea
-                <span class="link-card__badge">PRÓXIMAMENTE</span>
-              </h3>
-              <p class="link-card__desc">Catálogo completo de Pokémon TCG, singles de colección y slabs certificados.</p>
-            </div>
-          </div>
-          <div class="link-card__right">
-            <span class="link-card__action">[PRÓXIMAMENTE]</span>
-          </div>
-        </div>
 
       </div>
     </section>
@@ -363,23 +192,16 @@
     <footer class="site-footer">
       <div class="footer-dragon-brand">
         <img src="logo.svg" alt="LawCards Dragon" draggable="false" />
-        <span>LAWCARDS — COLECCIONABLES &amp; TCG</span>
-      </div>
-      <div class="footer-specs">
-        <span>MEDELLÍN, COLOMBIA</span>
-        <span>·</span>
-        <span>AUTENTICIDAD ENCAPSULADA</span>
-        <span>·</span>
-        <span>ENVÍOS ASEGURADOS</span>
+        <span>LAWCARDS · TCG</span>
       </div>
       <div class="footer-copy">
-        © 2026 LawCards. Venta de Cartas Coleccionables TCG.
+        © 2026 LawCards. Coleccionables TCG. Medellín, Colombia.
       </div>
     </footer>
 
   </main>
 
   <!-- Interactive JavaScript -->
-  <script src="js/app.js?v=3"></script>
+  <script src="js/app.js?v=4"></script>
 </body>
 </html>
